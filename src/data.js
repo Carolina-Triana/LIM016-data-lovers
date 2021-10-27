@@ -1,9 +1,17 @@
-// estas funciones son de ejemplo
+/*function loadJson(){
+fetch('src\data\rickandmorty\rickandmorty.json')
+.then(function(data){
+console.log(data);
 
-export const example = () => {
+})
+
+
+}*/
+
+/*export const example = () => {
   return 'example';
 };
 
 export const anotherExample = () => {
   return 'OMG';
-};
+};*/
