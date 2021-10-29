@@ -1,4 +1,4 @@
-    fetch('./data/rickandmorty/rickandmorty.json')
+fetch('./data/rickandmorty/rickandmorty.json')
     .then(function(info){ //primer then establece la coneccion con el archivo
         return info.json();
     })
@@ -20,7 +20,22 @@
         <li>Locacion: ${element.location.name}</li>
         </ul>
         </div>
-        </div>`
+        </div>`        
     })
-    document.getElementById("profiles").innerHTML=list
+   document.getElementById("profiles").innerHTML=list
+     let alpha = person.filter((gen) => {
+        if (gen.gender === "Female"){
+            return true;
+        } else {
+            return false;
+        }
+})
+let filter = document.getElementById("gender");
+filter.addEventListener('click', () => {
+console.log(alpha); // AL HACER CLICK IMPRIME EL VALOR DE ALPHA
+})
+})    
+       //no consigo como hacer que muestre solo este resultado, investiga un poco sobre eso =)
+//console.log(person);
+          
     })
