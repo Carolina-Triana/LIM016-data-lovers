@@ -4,7 +4,6 @@ fetch('./data/rickandmorty/rickandmorty.json')
     })
     .then(function(data){ //segundo then me llama la data de .json
     let person = data.results;
-    console.log(person);
     let list=''
     person.forEach(function(element){
         list+= `<div class="card">
@@ -23,9 +22,8 @@ fetch('./data/rickandmorty/rickandmorty.json')
         </div>
         </div>`        
     })
- let li = document.getElementById("profiles").innerHTML=list
-
-    let alpha = person.filter((gen) => {
+   document.getElementById("profiles").innerHTML=list
+     let alpha = person.filter((gen) => {
         if (gen.gender === "Female"){
             return true;
         } else {
@@ -39,3 +37,5 @@ console.log(alpha); // AL HACER CLICK IMPRIME EL VALOR DE ALPHA
 })    
        //no consigo como hacer que muestre solo este resultado, investiga un poco sobre eso =)
 //console.log(person);
+          
+    })
