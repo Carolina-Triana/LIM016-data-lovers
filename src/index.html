@@ -6,17 +6,16 @@
   <title>Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
   <section>
     <div class="header1" id="header">
-      Rick and Morty mini wiky
+      Rick & Morty mini wiki
     </div>
   </section>
   <section>
     <div class="webtab" id="tab">
       <label for="characters">
-        <button class="caracter" id="characters">Personajes</button>
+        <button class="ListCharacter" id="characters">Personajes</button>
       </label>
       <label for="episodes">
         <button class="listEpisodes" id="episodes">Lista de Episodios</button>
@@ -30,22 +29,31 @@
   <section>
     <div class="divFilter" id="filter">
       <select name="genero" id="gender" class="divGender">
-        <option>Femenino</option>
-        <option>Masculino</option>
-        <option>Sin genero</option>
-        <option>Desconocido</option>
+        <option value="none"></option>
+        <option value="Female">Mujer</option>
+        <option value="Male">Hombre</option>
+        <option value="Genderless">Sin género</option>
+        <option value="unknown">Desconocido</option>
       </select>
       <select name="especie" id="species" class="divSpecies">
-        <option>Humano</option>
-        <option>aliens</option>
-        <option>humanoide</option>
-        <option>saibor</option>
-        <option>enfermedad</option>
-        <option>robot</option>
+        <option value="none"></option>
+        <option value='Human'>Humano</option>
+        <option value='Alien'>Alien</option>
+        <option value='Humanoid'>Humanoide</option>
+        <option value='Robot'>Robot</option>
+        <option value='Disease'>Enfermedad</option>
+        <option value='Parasite'>Parásito</option>
+        <option value='Poopybutthole'>Poopybutthole</option>
+        <option value='Mytholog'>Mytholog</option>
+        <option value='Animal'>Animal</option>
+        <option value='Vampire'>Vampiro</option>
+        <option value='Cronenberg'>Cronenberg</option>
+        <option value='unknown'>Desconocido</option>
       </select>
       <select name="ordenar" id="alphabet" class="divAlphabet">
-        <option>A-Z</option>
-        <option>Z-A</option>
+        <option value="none"></option>
+        <option value="ascend">A-Z</option>
+        <option value="descend">Z-A</option>
       </select>
     </div>
   </section>

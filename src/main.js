@@ -4,7 +4,7 @@ fetch('./data/rickandmorty/rickandmorty.json')
     })
     .then(function(data){ //segundo then me llama la data de .json
     let person = data.results;
-    let list=''
+    let list=''//declaramos una variable que recopila el perfil de cada personaje
     person.forEach(function(element){
         list+= `<div class="card">
         <div>
@@ -23,19 +23,72 @@ fetch('./data/rickandmorty/rickandmorty.json')
         </div>`        
     })
    document.getElementById("profiles").innerHTML=list
-     let alpha = person.filter((gen) => {
-        if (gen.gender === "Female"){
-            return true;
-        } else {
-            return false;
-        }
+  
+   
+let filterGender = document.getElementById("gender");//filtrar por genero
+filterGender.addEventListener('change', () => {//usamos change para que el filtro sea inmediato cuando se cambia la opcion del select
+let genderChoice=filterGender.value
+let genderResults=person.filter((gen)=>{
+    if(gen.gender===genderChoice){//comparamos el genero del personaje con el valor de genero elegido
+        return true
+    }else{
+        if(genderChoice==="none")
+        return person
+    }
 })
-let filter = document.getElementById("gender");
-filter.addEventListener('click', () => {
-console.log(alpha); // AL HACER CLICK IMPRIME EL VALOR DE ALPHA
+console.log(genderResults)
 })
-})    
-       //no consigo como hacer que muestre solo este resultado, investiga un poco sobre eso =)
-//console.log(person);
-          
+
+
+let filterSpecies = document.getElementById("species");//filtrar por especie
+filterSpecies.addEventListener('change', () => {
+let speciesChoice=filterSpecies.value
+let speciesResults=person.filter((spe)=>{
+    if(spe.species==speciesChoice){
+        return true
+    }else{
+        if(speciesChoice==="none")
+        return person
+    }
+})
+console.log(speciesResults)
+})
+
+
+let orderAlpha=document.getElementById("alphabet")//ordenar por orden alfabetico
+orderAlpha.addEventListener('change', () =>{
+    let alphaChoice=orderAlpha.value
+    let alphaResults=person.sort((a,b)=>{//funcion sort
+        if(alphaChoice==="ascend"){//usamos ifs para saber si ordenamos de forma ascendente o descendente
+                if(a.name<b.name){
+                    return -1
+                }if(a.name>b.name){
+                    return 1
+                }
+                return 0
+            }if(alphaChoice==="descend"){
+                if(a.name<b.name){
+                    return 1
+                }if(a.name>b.name){
+                    return -1
+                }
+                return 0
+            }else{
+            if(alphaChoice==="none"){//si no se elige un orden, se filtra como en el inicio, con el orden de id
+                if(a.id<b.id){
+                    return -1
+                }if(a.id>b.id){
+                    return 1
+                }
+                return 0
+            }
+            }
+    })  
+    console.log(alphaResults)
     })
+})
+
+//Ya se puede buscar y ordenar pero como proceso independiente, faltaria poder hacer busquedas cruzadas.
+//Para eso deberiamos poner las funciones de filtrar y ordenar en data.js
+//Ahi le dariamos inicio a todo con el boton de Aplicar filtros y orden
+//La data de person iria pasando por cada filtro, reduciendo la info hasta obtener la info completamente filtrada y ordenada
