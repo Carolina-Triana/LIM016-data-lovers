@@ -7,36 +7,35 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <section>
-    <div class="header1" id="header">
-      Rick & Morty mini wiki
+  <header>
+    <div class="header1">
+      <img src="diseno/rmlogo.png" id="logo" alt="Rick & Morty">
+      <h1>mini wiki</h1>
     </div>
-  </section>
-  <section>
+    <div class="header2">
+      <img src="diseno/header-side.png" id="headerSide" alt="Rick y Morty saliendo del portal">
+      <p id="phrase">“¡Morty! Mira, aquí abajo, soy un pepinillo” - Rick</p>
+    </div>
+  </header>
+  <nav>
     <div class="webtab" id="tab">
-      <label for="characters">
-        <button class="ListCharacter" id="characters">Personajes</button>
-      </label>
-      <label for="episodes">
-        <button class="listEpisodes" id="episodes">Lista de Episodios</button>
-      </label>
-      </label>
-      <label for="location">
-        <button class="listLocation" id="location">Locaciones</button>
-      </label>
+        <button class="navButton" id="listCharacters">Personajes</button>   
+        <button class="navButton" id="listEpisodes">Lista de Episodios</button>
+        <button class="navButton" id="listLocations">Locaciones</button>
     </div>
-  </section>
-  <section>
+  </nav>
+  <fieldset>
     <div class="divFilter" id="filter">
+      <label class="labFieldset">Filtrar por:</label>
       <select name="genero" id="gender" class="divGender">
-        <option value="none"></option>
+        <option value="none">Género</option>
         <option value="Female">Mujer</option>
         <option value="Male">Hombre</option>
         <option value="Genderless">Sin género</option>
         <option value="unknown">Desconocido</option>
       </select>
       <select name="especie" id="species" class="divSpecies">
-        <option value="none"></option>
+        <option value="none">Especie</option>
         <option value='Human'>Humano</option>
         <option value='Alien'>Alien</option>
         <option value='Humanoid'>Humanoide</option>
@@ -50,13 +49,16 @@
         <option value='Cronenberg'>Cronenberg</option>
         <option value='unknown'>Desconocido</option>
       </select>
+      <label class="labFieldset">Ordenar por:</label>
       <select name="ordenar" id="alphabet" class="divAlphabet">
-        <option value="none"></option>
+        <option value="none">Relevancia</option>
         <option value="ascend">A-Z</option>
         <option value="descend">Z-A</option>
       </select>
+      <button id="applyFilters">Aplicar</button>
+      <button id="clean">Limpiar datos</button>
     </div>
-  </section>
+  </fieldset>
   <section>
 <div id="profiles"></div>
   </section>
@@ -64,12 +66,13 @@
 </body>
 
 <footer>
-  <div>
-    redes sociales
+  <div class="networks">
+    <img src="diseno/fb.png" id="fb"alt="logo facebook">
+    <img src="diseno/insta.png" id="ins" alt="logo instagram">
+    <img src="diseno/twit.png" id="twit" alt="logo twitter">
+    <img src="diseno/yt.png" id="yt" alt="logo youtube">
   </div>
-  <div>
-    creado por Gabriela Díaz y Carolina Triana Laboratoria LIM016
-  </div>
+  <p>Creado por Gabriela Díaz y Carolina Triana - Laboratoria LIM016</p>
 </footer>
 
 </html>
