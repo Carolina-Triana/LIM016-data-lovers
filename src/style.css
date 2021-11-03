@@ -1,5 +1,7 @@
+
 body{
     margin: 0px;
+    border-radius: 0px;
     background-image: url("diseno/galaxy-bg.png")
 }
 header{
@@ -66,6 +68,7 @@ nav{
 }
 .navButton:hover{
     background-color:rgb(163, 163, 163);
+    cursor: pointer;
 }
 .webtab{
     width: 100%;
@@ -91,6 +94,9 @@ select{
     margin-top: 5px;
     margin-right: 10px;
 }
+select:hover{
+    cursor:pointer
+}
 #applyFilters{
     background-color: #80CA23;
     color: white;
@@ -104,6 +110,7 @@ select{
 }
 #applyFilters:hover{
     background-color:#9ee745;
+    cursor: pointer;
 }
 #clean{
     margin-left: 150px;
@@ -119,6 +126,7 @@ select{
 }
 #clean:hover{
     background-color:#b6e9e1;
+    cursor: pointer;
 }
 .card{
     background-color: white;
