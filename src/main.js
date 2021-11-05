@@ -5,27 +5,28 @@ fetch('./data/rickandmorty/rickandmorty.json')
 
     
     .then(function(data){ //segundo then me llama la data de .json
-    let person = data.results;  
+    let person = data.results; 
     let persP=''//declaramos una variable que recopila el perfil de cada personaje
     person.forEach(function(element){
-        persP+= `<div class="card">
-        <div class="front">
+        persP+= `<div class="container">
+        <div class="card">
+             <div class="front">
         <img src=${element.image}></img>
         <h2>${element.name}</h2>
+            </div>
+                 <div class="info">
+         <ul>
+        <p>Estado: ${element.status}</p>
+        <p>Especie: ${element.species}</p>
+        <p>Genero: ${element.gender}</p>
+        <p>Origen: ${element.origin.name}</p>
+        <p>Locacion: ${element.location.name}</p>
+            </ul>
+                </div>
         </div>
-        <div class="info">
-        <ul>
-        <li>Estado: ${element.status}</li>
-        <li>Especie: ${element.species}</li>
-        <li>Genero: ${element.gender}</li>
-        <li>Origen: ${element.origin.name}</li>
-        <li>Locacion: ${element.location.name}</li>
-        </ul>
-        </div>
-        </div>`       
-         
+                 </div>`   
     })
-    
+   
     document.getElementById("profiles").innerHTML=persP
 
 
@@ -88,22 +89,24 @@ let orderAlpha=document.getElementById("alphabet")//ordenar por orden alfabetico
    
     let list=''//declaramos una variable que recopila el perfil de cada personaje
     alphaResults.forEach(function(element){
-        list+= `<div class="card">
-        <div class="front">
+        list+= `<div class="container">
+        <div class="card">
+             <div class="front">
         <img src=${element.image}></img>
         <h2>${element.name}</h2>
+            </div>
+                 <div class="info">
+         <ul>
+        <p>Estado: ${element.status}<p>
+        <p>Especie: ${element.species}</p>
+        <p>Genero: ${element.gender}</p>
+        <p>Origen: ${element.origin.name}</p>
+        <p>Locacion: ${element.location.name}</p>
+            </ul>
+                </div>
         </div>
-        <div class="info">
-        <ul>
-        <li>Estado: ${element.status}</li>
-        <li>Especie: ${element.species}</li>
-        <li>Genero: ${element.gender}</li>
-        <li>Origen: ${element.origin.name}</li>
-        <li>Locacion: ${element.location.name}</li>
-        </ul>
-        </div>
-        </div>`       
-         
+                 </div>`       
+
     })
     
     document.getElementById("profiles").innerHTML=list
