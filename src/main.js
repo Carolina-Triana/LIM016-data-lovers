@@ -16,11 +16,11 @@ fetch('./data/rickandmorty/rickandmorty.json')
             </div>
                  <div class="info">
          <ul>
-        <p>Estado: ${element.status}</p>
-        <p>Especie: ${element.species}</p>
-        <p>Genero: ${element.gender}</p>
-        <p>Origen: ${element.origin.name}</p>
-        <p>Locacion: ${element.location.name}</p>
+        <p><b>Estado:</b> ${element.status}</p>
+        <p><b>Especie:</b> ${element.species}</p>
+        <p><b>Genero:</b> ${element.gender}</p>
+        <p><b>Origen:</b> ${element.origin.name}</p>
+        <p><b>Locacion:</b> ${element.location.name}</p>
             </ul>
                 </div>
         </div>
@@ -97,11 +97,11 @@ let orderAlpha=document.getElementById("alphabet")//ordenar por orden alfabetico
             </div>
                  <div class="info">
          <ul>
-        <p>Estado: ${element.status}<p>
-        <p>Especie: ${element.species}</p>
-        <p>Genero: ${element.gender}</p>
-        <p>Origen: ${element.origin.name}</p>
-        <p>Locacion: ${element.location.name}</p>
+        <p><b>Estado:</b> ${element.status}<p>
+        <p><b>Especie:</b> ${element.species}</p>
+        <p><b>Genero:</b> ${element.gender}</p>
+        <p><b>Origen:</b> ${element.origin.name}</p>
+        <p><b>Locacion:</b> ${element.location.name}</p>
             </ul>
                 </div>
         </div>
