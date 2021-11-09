@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Slabo+27px&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <div class="header1">
+      <img src="diseno/rmlogo.png" id="logo" alt="Rick & Morty">
+      <h1>Mini-Wiki</h1>
+    </div>
+    <div class="header2">
+      <img src="diseno/img0.gif" id="headerSide" alt="Rick y Morty saliendo del portal">
+    </div>
+  </header>
+  <nav>
+    <div class="webtab" id="tab">
+      <a class="navButton" href="index.html">
+        <button class="navButton" id="listLocations">Bienvenida</button>
+      </a>
+        <a class="navButton" href="personajes.html">
+          <button class="navButton" id="listCharacters">Personajes</button>
+        </a>   
+        <a class="navButton" href="lista-episodios.html">
+          <button class="navButton"id="listEpisodes">Lista de Episodios</button>
+        </a>
+    </div>
+  </nav>
+  <fieldset>
+    <div class="divFilter" id="filter">
+      <label class="labFieldset">Filtrar por:</label>
+      <select name="genero" id="gender" class="divGender">
+        <option value="none">Género</option>
+        <option value="Female">Mujer</option>
+        <option value="Male">Hombre</option>
+        <option value="Genderless">Sin género</option>
+        <option value="unknown">Desconocido</option>
+      </select>
+      <select name="especie" id="species" class="divSpecies">
+        <option value="none">Especie</option>
+        <option value='Human'>Humano</option>
+        <option value='Alien'>Alien</option>
+        <option value='Humanoid'>Humanoide</option>
+        <option value='Robot'>Robot</option>
+        <option value='Disease'>Enfermedad</option>
+        <option value='Parasite'>Parásito</option>
+        <option value='Poopybutthole'>Poopybutthole</option>
+        <option value='Mytholog'>Mytholog</option>
+        <option value='Animal'>Animal</option>
+        <option value='Vampire'>Vampiro</option>
+        <option value='Cronenberg'>Cronenberg</option>
+        <option value='unknown'>Desconocido</option>
+      </select>
+      <label class="labFieldset">Ordenar por:</label>
+      <select name="ordenar" id="alphabet" class="divAlphabet">
+        <option value="none">Relevancia</option>
+        <option value="ascend">A-Z</option>
+        <option value="descend">Z-A</option>
+      </select>
+      <button id="applyFilters">Aplicar</button>
+      <button id="clean">Limpiar datos</button>
+    </div>
+  </fieldset>
+  <section>
+<div class="cardsContainer">  
+  <div id="profiles"></div>
+</div>
+  </section>
+  <script src="main.js" type="module"></script>
+</body>
+
+<footer>
+  <div class="networks">
+    <img src="diseno/fb.png" id="fb"alt="logo facebook">
+    <img src="diseno/insta.png" id="ins" alt="logo instagram">
+    <img src="diseno/twit.png" id="twit" alt="logo twitter">
+    <img src="diseno/yt.png" id="yt" alt="logo youtube">
+  </div>
+  <p>Creado por Gabriela Díaz y Carolina Triana - Laboratoria LIM016</p>
+</footer>
+
+</html>
