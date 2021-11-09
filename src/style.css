@@ -84,10 +84,12 @@ nav{
     width: 100%;
     height: 2.5vw;
     border: none;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Orbitron', sans-serif;
     font-size: 1.6vw;
-    color: white;
+    color: rgb(0, 0, 0);
 }
+
+
 .navButton:hover{
     background-color:rgb(163, 163, 163);
     cursor: pointer;
@@ -101,8 +103,8 @@ nav{
 /*--------barra de filtrado-------*/
 fieldset{
     width:100%;
-    height: 2.2vw;
-    margin: 0vw;
+    height: 5vh;
+    margin: 0vh;
     display: inline-flex;
     flex-direction: stretch;
     background-color: silver;
@@ -185,7 +187,7 @@ select:hover{
     flex-direction: row;
     flex-wrap: wrap;
     margin:0.5vw 0.5vw;
-    justify-content: space-around; 
+    justify-content:space-evenly; 
 }
 .container{
     padding: 1vw;
@@ -403,6 +405,8 @@ margin-left: -100%;
 }
 .slider-section{
 width: 100%;
+max-width: 90vw;
+margin: auto;
 }
 .slider-img{
 display: block;
@@ -439,11 +443,12 @@ left: 1vw;
     font-family: 'Poppins', sans-serif;
    text-align:center;
    background-color: rgba(3, 3, 3, 1);
-   height: 4vw;
+   height: 6vh;
    font-size: 2.1vh;
    top: 91%;
-   width: 100%; 
-   text-anchor:middle;
+   width: 100%;
+
+
 
 }
 .btn-up{

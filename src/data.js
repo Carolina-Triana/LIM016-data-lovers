@@ -15,11 +15,15 @@ console.log(data);
 export const anotherExample = () => {
   return 'OMG';
 };*/
+let aux= document.getElementById("audio");
+aux.volume = 0.05;
 const slider = document.getElementById("slider");
 let sliderSection = document.querySelectorAll(".slider-section");
 let sliderSectionFin = sliderSection[sliderSection.length -1];
 const btnLeft = document.getElementById("slider-btn-left");
 const btnRight = document.getElementById("slider-btn-rigth");
+
+
 
 slider.insertAdjacentElement('afterbegin', sliderSectionFin); // coloca de priemero la ultima imagen para que se vuelva infinito
 function next(){
