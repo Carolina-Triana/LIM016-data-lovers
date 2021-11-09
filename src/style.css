@@ -446,4 +446,27 @@ left: 1vw;
    text-anchor:middle;
 
 }
+.btn-up{
+    width: 4vw;
+    height: 4vw;
+    color:#fff;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 2vw;
+    background: rgba(100, 148, 237);
+    position: fixed;
+    bottom: 4vw;
+    right: 2vw;
+    cursor: pointer;
+    border:0.5vw solid transparent;
+    transition: all 300ms ease;
+    transform: scale(0);
 
+
+}
+.btn-up:hover{
+    transform: scale(1.1);
+    border-color: rgba(0, 0, 0, 0.055);
+}

@@ -121,6 +121,26 @@ clean.addEventListener('click',() => {
     location.reload() })
 
 
+// boton up //
+let btnUp = document.getElementById("btn-up")
+btnUp =addEventListener("click", scrollUp);
+function scrollUp(){
+    let scroll = document.documentElement.scrollTop;
+    if(scroll >0){
+        window.requestAnimationFrame(scrollUp);
+        window.scrollTo (0, scroll -(scroll / 8));
+    }
+}
+let btn = document.querySelector(".btn-up")
+window.onscroll = function(){
+    let scrolltop = document.documentElement.scrollTop;
+    if(scrolltop > 500){
+     btn.style.transform = "scale(1)";
+    }else if(scrolltop < 500){
+        btn.style.transform = "scale(0)";
+
+    }
+}
 
 //Poner las funciones de filtrar y ordenar en data.js
 //Pensar como hacer busqueda multiple
