@@ -1,3 +1,4 @@
+
 fetch('./data/rickandmorty/rickandmorty.json')
     .then(function(info){ //primer then establece la coneccion con el archivo
         return info.json();
@@ -26,7 +27,7 @@ fetch('./data/rickandmorty/rickandmorty.json')
         </div>
                  </div>`   
     })
-   
+
     document.getElementById("profiles").innerHTML=persP
 
 

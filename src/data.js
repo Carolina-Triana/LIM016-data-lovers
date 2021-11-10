@@ -14,7 +14,8 @@ console.log(data);
 
 export const anotherExample = () => {
   return 'OMG';
-};*/
+};
+/* -----carrusel-------*/
 let aux= document.getElementById("audio");
 aux.volume = 0.05;
 const slider = document.getElementById("slider");
