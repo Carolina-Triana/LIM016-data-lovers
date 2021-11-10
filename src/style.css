@@ -180,6 +180,9 @@ select:hover{
     background-color:#b6e9e1;
     cursor: pointer;
 }
+#numberOfResults{
+    color: white;
+}
 /*--------------- cards -----------------*/
 #profiles{    
     display: flex;

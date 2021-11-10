@@ -1,60 +1,77 @@
-/*function loadJson(){
-fetch('src\data\rickandmorty\rickandmorty.json')
-.then(function(data){
-console.log(data);
+const func={
+  formatData:function(list){
+    let profiles=''
+    list.forEach(function(element){
+      profiles+= 
+      `<div class="container">
+      <div class="card">
+      <div class="front">
+      <img src=${element.image}></img>
+      <h2>${element.name}</h2>
+      </div>
+      <div class="info">
+      <ul>
+      <p><b>Estado:</b> ${element.status}</p>
+      <p><b>Especie:</b> ${element.species}</p>
+      <p><b>Genero:</b> ${element.gender}</p>
+      <p><b>Origen:</b> ${element.origin.name}</p>
+      <p><b>Locacion:</b> ${element.location.name}</p>
+      </ul>
+      </div>
+      </div>
+      </div>`
+    })
+    return profiles
+  },
 
-})
+  filterData:function(list, choice1, choice2){
+    let resultGen=list.filter((p)=>{
+      if(p.gender===choice1){
+        return true
+      }else{
+        if(choice1==="none")
+        return list
+      }
+    })
+    let finalResult=resultGen.filter((p)=>{
+      if(p.species===choice2){
+        return true
+      }else{
+        if(choice2==="none")
+        return resultGen
+      }
+    })
+    return finalResult
+  },
 
-
-}*/
-
-/*export const example = () => {
-  return 'example';
-};
-
-export const anotherExample = () => {
-  return 'OMG';
-};*/
-let aux= document.getElementById("audio");
-aux.volume = 0.05;
-const slider = document.getElementById("slider");
-let sliderSection = document.querySelectorAll(".slider-section");
-let sliderSectionFin = sliderSection[sliderSection.length -1];
-const btnLeft = document.getElementById("slider-btn-left");
-const btnRight = document.getElementById("slider-btn-rigth");
-
-
-
-slider.insertAdjacentElement('afterbegin', sliderSectionFin); // coloca de priemero la ultima imagen para que se vuelva infinito
-function next(){
-  let sliderOne = document.querySelectorAll(".slider-section")[0];
-  slider.style.marginLeft = "-200%";
-  slider.style.transition = "all 0.5s";
-  setTimeout(function(){ //setTimeOut una funcion para ejecutar despues del temporizador en este caso 500 q son medio segundo
-    slider.style.transition = "none";
-    slider.insertAdjacentElement("beforeend", sliderOne);
-    slider.style.marginLeft = "-100%";
-  },500);
+  sortData:function(list, mode){
+    let alphaResults=list.sort((a,b)=>{
+      if(mode==="ascend"){
+        if(a.name<b.name){
+          return -1
+        }if(a.name>b.name){
+          return 1
+        }
+        return 0
+      }if(mode==="descend"){
+        if(a.name<b.name){
+          return 1
+        }if(a.name>b.name){
+          return -1
+        }
+        return 0
+      }else{
+        if(mode==="none"){
+          if(a.id<b.id){
+            return -1
+          }if(a.id>b.id){
+            return 1
+          }
+          return 0
+        }
+      }
+    })
+    return alphaResults
+  }
 }
-
-function prew(){
-  let sliderSection = document.querySelectorAll(".slider-section");
-  let sliderSectionFin = sliderSection[sliderSection.length -1];
-  slider.style.marginLeft = "0";
-  slider.style.transition = "all 0.5s";
-  setTimeout(function(){ 
-    slider.style.transition = "none";
-    slider.insertAdjacentElement('afterbegin', sliderSectionFin);
-    slider.style.marginLeft = "-100%";
-  },500);
-}
-btnRight.addEventListener('click', function(){
-  next();
-});
-btnLeft.addEventListener('click', function(){
-  prew();
-});
-
-setInterval(function(){ //setInterval para que se ejecute algo automaticamente
-next()
-},7000);
+export default func
