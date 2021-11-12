@@ -20,7 +20,7 @@ function next(){
 }
 function prew(){
   let sliderSection = document.querySelectorAll(".slider-section");
-  let sliderSectionFin = sliderSection[sliderSection.length -1];
+  let sliderSectionFin = sliderSection[sliderSection.length-1];
   slider.style.marginLeft = "0";
   slider.style.transition = "all 0.5s";
   setTimeout(function(){ 
