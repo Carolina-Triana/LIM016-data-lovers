@@ -16,10 +16,10 @@ fetch('./data/rickandmorty/rickandmorty.json')
         let numberResults=filterResults.length
         if (numberResults>0){
             console.log(numberResults)
-            document.getElementById("numberOfResults").innerHTML=numberResults
+            document.getElementById("numberOfResults").innerHTML=numberResults+" coincidencias"
         }else{
             console.log("0 resultados")
-            document.getElementById("numberOfResults").innerHTML=numberResults
+            document.getElementById("numberOfResults").innerHTML=numberResults + "  coincidencias"
         }
         let orderChoice=document.getElementById("alphabet").value
         let orderedResults=func.sortData(filterResults, orderChoice)
@@ -37,21 +37,20 @@ clean.addEventListener('click',() => {
 
 
 // boton up //
-let btnUp = document.getElementById("btn-up")
-btnUp =addEventListener("click", scrollUp);
+let bt =document.getElementById("btn-up").addEventListener("click", scrollUp);
 function scrollUp(){
-    let scroll = document.documentElement.scrollTop;
-    if(scroll >0){
+    let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    if( scroll >0 ){
         window.requestAnimationFrame(scrollUp);
-        window.scrollTo (0, scroll -(scroll / 8));
+        window.scrollTo (0, scroll -(scroll / 5));
     }
 }
-let btn = document.querySelector(".btn-up")
+let btn = document.getElementById("btn-up");
 window.onscroll = function(){
-    let scrolltop = document.documentElement.scrollTop;
-    if(scrolltop > 500){
+    let scroll = document.documentElement.scrollTop;
+    if(scroll > 500){
      btn.style.transform = "scale(1)";
-    }else if(scrolltop < 500){
+    }else if(scroll < 500){
         btn.style.transform = "scale(0)";
 
     }
