@@ -58,7 +58,7 @@ clean.addEventListener('click',() => {
 
 // boton up //
 
-let bt =document.getElementById("btn-up").addEventListener("click", scrollUp);
+document.getElementById("btn-up").addEventListener("click", scrollUp);
 function scrollUp(){
     let scroll = document.documentElement.scrollTop || document.body.scrollTop;
     if( scroll >0 ){
