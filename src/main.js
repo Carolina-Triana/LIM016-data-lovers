@@ -5,27 +5,47 @@ fetch('./data/rickandmorty/rickandmorty.json')
 })
 .then(function(data){ //segundo then me llama la data de .json
     let person = data.results
-    let personFormat=func.formatData(person)
+
+    function renderData (list){
+        let profiles=''
+        list.forEach(function(element){
+          profiles+= 
+          `<div class="container">
+          <div class="card">
+          <div class="front">
+          <img src=${element.image}></img>
+          <h2>${element.name}</h2>
+          </div>
+          <div class="info">
+          <ul>
+          <p><b>Estado:</b> ${element.status}</p>
+          <p><b>Especie:</b> ${element.species}</p>
+          <p><b>Genero:</b> ${element.gender}</p>
+          <p><b>Origen:</b> ${element.origin.name}</p>
+          <p><b>Locacion:</b> ${element.location.name}</p>
+          </ul>
+          </div>
+          </div>
+          </div>`
+        })
+        return profiles
+    }    
+
+    let personFormat=renderData(person)
     document.getElementById("profiles").innerHTML=personFormat
 
     let getResults=document.getElementById("applyFilters")
     getResults.addEventListener('click',() =>{
         let genderChoice=document.getElementById("gender").value
         let speciesChoice=document.getElementById("species").value
-        let filterResults=func.filterData(person, genderChoice, speciesChoice)
-        let numberResults=filterResults.lenght
-        if (numberResults>0){
-            console.log(numberResults)
-            document.getElementById("numberOfResults").innerHTML=numberResults
-        }else{
-            console.log("0 resultados")
-            document.getElementById("numberOfResults").innerHTML=numberResults
-        }
+        let statusChoice=document.getElementById("status").value
+        let filterResults=func.filterData(person, genderChoice, speciesChoice, statusChoice)
+        let numberResults=filterResults.length
+        document.getElementById("numberOfResults").innerHTML=numberResults + " resultados"
         let orderChoice=document.getElementById("alphabet").value
         let orderedResults=func.sortData(filterResults, orderChoice)
-        console.log(orderedResults)
-        let formatedData=func.formatData(orderedResults)
-        document.getElementById("profiles").innerHTML=formatedData
+        let renderedData=renderData(orderedResults)
+        document.getElementById("profiles").innerHTML=renderedData
     })
 })
 
@@ -38,7 +58,7 @@ clean.addEventListener('click',() => {
 
 // boton up //
 let btnUp = document.getElementById("btn-up")
-btnUp =addEventListener("click", scrollUp);
+btnUp.addEventListener("click", scrollUp);
 function scrollUp(){
     let scroll = document.documentElement.scrollTop;
     if(scroll >0){
