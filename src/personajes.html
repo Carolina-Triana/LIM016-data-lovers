@@ -34,7 +34,7 @@
           <button class="navButton" id="listCharacters" style="background-color:rgb(163, 163, 163);">Personajes</button>
         </a>   
         <a class="navButton" href="lista-episodios.html">
-          <button class="navButton"id="listEpisodes">Lista de Episodios</button>
+          <button class="navButton" id="listEpisodes">Lista de Episodios</button>
         </a>
     </div>
   </nav>
@@ -50,18 +50,24 @@
       </select>
       <select name="especie" id="species" class="divSpecies">
         <option value="none">Especie</option>
-        <option value='Human'>Humano</option>
-        <option value='Alien'>Alien</option>
-        <option value='Humanoid'>Humanoide</option>
-        <option value='Robot'>Robot</option>
-        <option value='Disease'>Enfermedad</option>
-        <option value='Parasite'>Parásito</option>
-        <option value='Poopybutthole'>Poopybutthole</option>
-        <option value='Mytholog'>Mytholog</option>
-        <option value='Animal'>Animal</option>
-        <option value='Vampire'>Vampiro</option>
-        <option value='Cronenberg'>Cronenberg</option>
-        <option value='unknown'>Desconocido</option>
+        <option value="Human">Humano</option>
+        <option value="Alien">Alien</option>
+        <option value="Humanoid">Humanoide</option>
+        <option value="Robot">Robot</option>
+        <option value="Disease">Enfermedad</option>
+        <option value="Parasite">Parásito</option>
+        <option value="Poopybutthole">Poopybutthole</option>
+        <option value="Mytholog">Mytholog</option>
+        <option value="Animal">Animal</option>
+        <option value="Vampire">Vampiro</option>
+        <option value="Cronenberg">Cronenberg</option>
+        <option value="unknown">Desconocido</option>
+      </select>
+      <select name="estado" id="status" class="divStatus">
+        <option value="none">Estado</option>
+        <option value="Alive">Vivo</option>
+        <option value="Dead">Muerto</option>
+        <option value="unknown">Desconocido</option>
       </select>
       <label class="labFieldset">Ordenar por:</label>
       <select name="ordenar" id="alphabet" class="divAlphabet">
@@ -71,7 +77,7 @@
       </select>
       <button id="applyFilters">Aplicar</button>
       <button id="clean">Limpiar datos</button>
-      <p id=numberOfResults></p>
+      <p id="numberOfResults"></p>
     </div>
   </fieldset>
   <section id="listapersonajes">
@@ -89,7 +95,7 @@
 </body>
 <footer>
   <div class="networks">
-    <img src="diseno/fb.png" id="fb"alt="logo facebook">
+    <img src="diseno/fb.png" id="fb" alt="logo facebook">
     <img src="diseno/insta.png" id="ins" alt="logo instagram">
     <img src="diseno/twit.png" id="twit" alt="logo twitter">
     <img src="diseno/yt.png" id="yt" alt="logo youtube">
