@@ -50,6 +50,10 @@ const func={
       }
     )
     return alphaResults
+  },
+  computeData:function(total,amount){
+    let result=(amount.length/total.length)*100
+    return result
   }
 }
 export default func
