@@ -9,8 +9,8 @@ body{
     min-width: 100vw;
     margin: 0vw;
     border-radius: 0vw;
-    min-height: 100vw;
-    background-image: url("diseno/galaxy-bg.png");
+    min-height: 47vw;
+    background-image: url("src/diseno/galaxy-bg.png");
     overflow-x: hidden;
 }
 header{
@@ -383,10 +383,10 @@ h2{
     margin: 1vw;
     color: rgb(118, 236, 40);
     font-family: 'Orbitron', sans-serif;
-   text-align: center;
-   font-size: 4vw;   
-   filter: drop-shadow(0vw 0.2vw 0.2vw);
-   height: 15vw;   
+    text-align: center;
+    font-size: 4vw;   
+    filter: drop-shadow(0vw 0.2vw 0.2vw);
+    height: 15vw;   
 }
 .description{
     font-size: 1.5vw;

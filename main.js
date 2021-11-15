@@ -1,5 +1,5 @@
 import func from './data.js'
-fetch('./data/rickandmorty/rickandmorty.json')
+fetch('./src/data/rickandmorty/rickandmorty.json')
 .then(function(info){ //primer then establece la conexion con el archivo
     return info.json()
 })
@@ -33,6 +33,7 @@ fetch('./data/rickandmorty/rickandmorty.json')
 
     let personFormat=renderData(person)
     document.getElementById("profiles").innerHTML=personFormat
+    document.getElementById("numberOfResults").innerHTML=person.length + " resultados"
 
     let getResults=document.getElementById("applyFilters")
     getResults.addEventListener('click',() =>{
