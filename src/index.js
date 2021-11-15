@@ -38,3 +38,12 @@ btnLeft.addEventListener('click', function(){
 setInterval(function(){ //setInterval para que se ejecute algo automaticamente
 next()
 },7000);
+/////********* graficas************/////
+/*async function fetchdata(){
+  const url = 'https://rickandmortyapi.com/api/character';
+  const resp = await fetch(url);
+  const data = await resp.json();
+  console.log(data);
+  return data;
+
+}*/
