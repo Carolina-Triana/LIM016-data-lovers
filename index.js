@@ -1,48 +1,6 @@
 let aux= document.getElementById("audio");
 aux.volume = 0.05;
 
-/*import func from './data.js'
-
-fetch('./data/rickandmorty/rickandmorty.json')
-.then(function(info){ //primer then establece la conexion con el archivo
-    return info.json()
-})
-.then(function(data){ //segundo then me llama la data de .json
-    let person = data.results
-    let alive=func.filterData(person, "none", "none", "Alive")
-    let dead=func.filterData(person, "none", "none", "Dead")
-    let unknown=func.filterData(person, "none", "none", "unknown")
-
-    let porcAlive=func.computeData(person, alive)
-    let porcDead=func.computeData(person, dead)
-    let porcUnknown=func.computeData(person, unknown)
-
-    google.charts.load('current', {'packages':['corechart']});
-    google.charts.setOnLoadCallback(drawChart);
-
-    function drawChart() {
-
-        var data = google.visualization.arrayToDataTable([
-          ['Estado de vida', 'Cantidad de personajes'],
-          ['Vivo',     porcAlive],
-          ['Muerto',     porcDead],
-          ['Desconocido',     porcUnknown]
-        ]);
-
-        var options = {
-          pieHole: 0.5,
-          pieSliceTextStyle: {
-            color: 'ffffff',
-          },
-          title: 'Estado de vida',
-          colors:['#9acd32','#40e0d0', '#696969'],
-          legend: {position: 'top', textStyle: {color: 'black', fontSize:16, alignment: 'end', position: 'right'}}
-        };
-
-        var chart = new google.visualization.PieChart(document.getElementById('donut_single'));
-        chart.draw(data, options);
-      }
-})*/
 
 const slider = document.getElementById("slider");
 let sliderSection = document.querySelectorAll(".slider-section");
@@ -80,3 +38,4 @@ btnLeft.addEventListener('click', function(){
 setInterval(function(){ //setInterval para que se ejecute algo automaticamente
 next()
 },7000);
+
