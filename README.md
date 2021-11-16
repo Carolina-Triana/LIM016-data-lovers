@@ -125,7 +125,7 @@ A medida que fuimos desarrollando el sitio surgieron algunos cambios de diseño 
 Posteriormente, habiendo hecho el despliegue en GitHub pages, hicimos tests entre algunos fans de la serie y usuarios comunes de sitios web para comprobar la facilidad de uso de la interfaz.  
 Las conclusiones del feedback provisto fueron:
 
-*	Arreglar el orden en la barra de filtrado cuando se usa en otros dispositivos
+* Arreglar el orden en la barra de filtrado cuando se usa en otros dispositivos
 * Poder filtrar por estado de vida
 
 
