@@ -19,6 +19,7 @@ Todo inicia cuando el genio, irresponsable y algo depresivo Rick se muda a casa 
 
 Actualmente cuenta con 5 temporadas, 51 episodios y un especial.  Se estima que la temporada 6 será estrenada en el 2022.
 
+![RyM gif](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/carrusel/img2.gif)
 
 ## 2. Enfoque del proyecto
 
