@@ -496,13 +496,11 @@ left: 1vw;
     border-color: rgba(0, 0, 0, 0.055);
 }
 /*---------responsive------*/
-@media screen and (max-width:375px ){
+@media screen and (max-width:768px ){
     select{
-width: 13vh;
-height: 2.5vh;
-display: flex;
-font-size: 0.6em;
-padding: 1vh 1vh 1vh 1vh;
+width: 5em;
+height: 1.9em;
+font-size: 0.5em;
 outline: none;
 color: black;
 border: 1px solid #C8BFC4;
@@ -510,13 +508,14 @@ border-radius: 4px;
 box-shadow: inset 1px 1px 2px #ddd8dc;
 background-color: rgb(131, 250, 151);
 font-family: 'Orbitron', sans-serif;
-line-height : 1em;
+line-height : 0em;
 display: flex;
 flex-wrap: wrap;
 margin:0vw 0vw;
-align-items: center;
+align-items: stretch;
 object-fit: cover;
-padding: 0.1vw 0.2vw;
+padding: 0em 3em;
+
     }
     fieldset label{
         font-family: 'Slabo 27px', serif;
@@ -551,7 +550,7 @@ fieldset{
   align-items: center;
 }
 #applyFilters{
-    margin-left: 2vw;
+    margin-left: 0.1em;
      background-color: rgb(131, 250, 151);
      color: rgb(5, 3, 119);
      font-family: 'Orbitron', sans-serif;
@@ -560,13 +559,13 @@ fieldset{
      border: none;
      border-radius: 0.2vw;
      box-sizing:border-box;
-     padding: 0vh 1vh;
+     padding: 0vh 0.2em;
      text-decoration: none;
      display: flex;
      
  }
  #clean{
-    margin-left: 2vw;
+    margin-left: 0vw;
     background-color: rgb(255, 72, 87);
     color: rgb(5, 3, 119);
     font-family: 'Orbitron', sans-serif;
@@ -575,12 +574,12 @@ fieldset{
     border: none;
     border-radius: 0.2vw;
     box-sizing:border-box;
-    padding: 0vh 1vh;
+    padding: 0vh 0.2em;
     text-decoration: none;
 }
 #numberOfResults{
     color: rgb(4, 0, 65);
-    margin-left: 2vh;
+    margin-left: 0.1em;
     font-family: 'Orbitron', sans-serif;
     font-size: 1.5vh;
 }
@@ -640,9 +639,9 @@ footer p{
 }
 footer img{
     height:3.5vw;
-    margin: 1vw;
+    margin-left: 2vw;
     cursor: pointer;
-    width: 100%;
+    width: 3vw;
 }
 /*---header---*/
 .header1{
@@ -651,19 +650,19 @@ footer img{
     margin-left: 15vw;
 }
 #logo{
-    width: 45vw;
+    width: 13em;
     height: auto;
     margin-top: 1vw;
     filter: drop-shadow(0vw 0.5vw 0.5vw #80CA23);
 }
 h1{
     margin-top: -2vw;
-    margin-left: 16.5vw;
+    margin-left: 10vw;
     margin-right: 11vw;
     width: 40vw;
     color: #9ae939;
     font-family: 'Orbitron', sans-serif;
-    font-size: 3vw;
+    font-size: 1.5em;
     filter: drop-shadow(0vw 0.2vw 0.2vw);
 }
 #headerSide{
@@ -672,7 +671,7 @@ h1{
     position: relative;
     z-index: 1;
     opacity: 0.9;
-    right: 6vw;
+    right: 2vw;
 }
 .container{
     display: flex;
@@ -699,7 +698,11 @@ h1{
     height: 80%;
     margin: 0.5vw 6vw;
     display:flex;
-    align-items: center;    
+    align-items: center; 
+    transform-style: preserve-3d;   
+   transform:  rotateY(0deg);
+   -webkit-transform:rotateY(0deg);   
+   position: absolute;
 }
 .front img{
     position: relative;
@@ -708,6 +711,7 @@ h1{
      margin: 6vw;
      max-width: 53vw;
      transform-style: preserve-3d;
+    backface-visibility: hidden;
     }
     .front h2{
         font-size: 5vw;    
@@ -717,7 +721,21 @@ h1{
         height: 100%;
         font-size: 5vw;
         line-height:8vw;    
+        position:absolute;
+        display: flex;    
+        transform:  rotateY(180deg) translateZ(6vw);  
+        -webkit-transform: rotateY(180deg) translateZ(6vw);
+        backface-visibility: hidden;
+    transform-style: preserve-3d;
     } 
+    
+.container:hover .card{
+    -webkit-transform: rotateY(180deg);
+    -ms-transform:  rotateY(180deg);
+    -o-transform:  rotateY(180deg);
+    transform: rotateY(180deg);   
+    background-color:#f8ee8f;
+}
     h2{
         top:5vw;
         height: 35vw;
@@ -786,6 +804,187 @@ h1{
         margin: 2vw 4vw;
         
     }
-}
+};
 
+/*@media only screen and (max-width:800px ) {
+    select{
+        width: 5em;
+        height: 1.9em;
+        font-size: 0.5em;
+        outline: none;
+        color: black;
+        border: 1px solid #C8BFC4;
+        border-radius: 4px;
+        box-shadow: inset 1px 1px 2px #ddd8dc;
+        background-color: rgb(131, 250, 151);
+        font-family: 'Orbitron', sans-serif;
+        line-height : 0em;
+        display: flex;
+        flex-wrap: wrap;
+        margin:0vw 0vw;
+        align-items: stretch;
+        object-fit: cover;
+        padding: 0em 3em;
+        
+            }
+            fieldset label{
+                font-family: 'Slabo 27px', serif;
+                font-size: 2vh;
+                margin-left: 1vw;
+                display: flex;
+            
+            }
+        .divFilter{
+            display: flex;
+            max-width: 100vw;
+            flex-wrap: wrap;
+            margin:0.1vw 0vw;
+            align-items: stretch;
+            padding: 0.1em 0em;           
+            justify-content: space-evenly;         
+        }
+        fieldset{
+            width:100%;
+            margin: 0vh;
+            display: inline-flex;
+            flex-direction: stretch;
+            background-color: silver;
+            border: none;
+            position: -webkit-sticky;
+          position: sticky;
+          top: 0vw;
+          z-index: 1;
+          align-items: center;
+        }
+        #applyFilters{
+            margin-left: 0.1em;
+             background-color: rgb(131, 250, 151);
+             color: rgb(5, 3, 119);
+             font-family: 'Orbitron', sans-serif;
+             font-size: 1.8vh;
+             text-align: center;
+             border: none;
+             border-radius: 0.2vw;
+             box-sizing:border-box;
+             padding: 0vh 0.2em;
+             text-decoration: none;
+             display: flex;
+             
+         }
+         #clean{
+            margin-left: 0vw;
+            background-color: rgb(255, 72, 87);
+            color: rgb(5, 3, 119);
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.8vh;
+            text-align: center;
+            border: none;
+            border-radius: 0.2vw;
+            box-sizing:border-box;
+            padding: 0vh 0.2em;
+            text-decoration: none;
+        }
+        #numberOfResults{
+            color: rgb(4, 0, 65);
+            margin-left: 0.1em;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.5vh;
+        }
+        fieldset{
+            width:100%;
+            height: 6vh;
+            margin: 0vh;
+            display: inline-flex;
+            flex-direction: stretch;
+            background-color: silver;
+            border: none;
+            position: -webkit-sticky;
+          position: sticky;
+          top: 0vw;
+          z-index: 1;
+          align-items: center;
+        }
+    
+        .container{
+            display: flex;
+            min-width: 31vw;
+            height: 32vw;
+
+        }
+        
+        .card {
+            background-color: white;
+            border-radius: 6px;
+            text-align: center;
+            display: flex;
+            max-width: 80vw;
+            margin: 0vw 3vw;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            position: relative;
+            width: 80%;
+            height: 100%;
+        }
+        .card .front{
+            width: 100%;
+            height: 80%;
+            margin: 0.5vw 6vw;
+            display:flex;
+            align-items: center; 
+            transform-style: preserve-3d;   
+           transform:  rotateY(0deg);
+           -webkit-transform:rotateY(0deg);   
+           position: absolute;
+        }
+        .front img{
+            position: relative;
+             height: 95%;
+             width: 88%;
+             margin: 2vw;
+             max-width: 53vw;
+             transform-style: preserve-3d;
+            backface-visibility: hidden;
+            }
+            .front h2{
+                font-size: 0.6em;    
+                margin-top: -2em;
+                margin-left: 1.2em;
+            }
+            .card .info{
+                width: 80%;
+                height: 100%;
+                font-size: 5vw;
+                line-height:8vw;    
+                position:absolute;
+                display: flex;    
+                transform:  rotateY(180deg) translateZ(6vw);  
+                -webkit-transform: rotateY(180deg) translateZ(6vw);
+                backface-visibility: hidden;
+            transform-style: preserve-3d;
+            } 
+            
+        .container:hover .card{
+            -webkit-transform: rotateY(180deg);
+            -ms-transform:  rotateY(180deg);
+            -o-transform:  rotateY(180deg);
+            transform: rotateY(180deg);   
+            background-color:#f8ee8f;
+        }
+            h2{
+                top:5vw;
+                height: 35vw;
+                font-size: 7vw;
+                position: relative;
+                text-align: center;
+            }
+            .description{
+                width: 90%;
+                top:-10vw;
+                text-align: center;
+                margin: auto;
+                font-size: 2.5vh;
+            }
+}
+*/
 
