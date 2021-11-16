@@ -107,10 +107,19 @@ En este proyecto crearemos un APIcon la data procurada en el repositorio, en est
 
 **Prototipos de papel**
 
+![P1](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/pp1-1.jpeg)
+![P2](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/pp1-2.jpeg)
+![P3](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/pp2-1.jpeg)
+![P4](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/pp2-2.jpeg)
+
 **Prototipos de alta fidelidad**
+
+![PAF1](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/prototipo1-1.PNG)
+![PAF2](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/prototipo1-2.PNG)
 
 **Prototipo final**
 
+![PF](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/prototipo2.PNG)
 
 ## 6. Tests de usabilidad
 
@@ -123,11 +132,19 @@ A medida que fuimos desarrollando el sitio surgieron algunos cambios de diseño 
 *	Agregar la cantidad de resultados de la búsqueda al filtrar
 *	Colocar un botón para regresar arriba en la página de personajes
 
+![Indice](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/indice.PNG)
+![Personajes](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/personajes.PNG)
+![Episodios](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/episodios.PNG)
+
 Posteriormente, habiendo hecho el despliegue en GitHub pages, hicimos tests entre algunos fans de la serie y usuarios comunes de sitios web para comprobar la facilidad de uso de la interfaz.  
 Las conclusiones del feedback provisto fueron:
 
 * Arreglar el orden en la barra de filtrado cuando se usa en otros dispositivos
 * Poder filtrar por estado de vida
-
+* Cambiar fuentes de los labels
 
 Es así que cambiamos el diseño de la página en estos aspectos, resultando en esto:
+
+![Responsive-movil-1](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/rm1.PNG)
+![Responsive-movil-2](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/rm2.PNG)
+![Responsive-tablet](https://github.com/G9D4/LIM016-data-lovers/blob/main/src/imagenesrdm/rt3.PNG)
