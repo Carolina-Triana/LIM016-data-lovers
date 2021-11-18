@@ -33,7 +33,7 @@ function drawChart() {
   ]);
 
   let options = {
-    title: 'Estado de personajes temporada 3',
+    title: 'Estado personajes',
     titleTextStyle: {bold:'true', fontSize: 18},
     colors: ['#80CA23','#45B5C7','#a9a9a9'],
     pieHole: 0.4,
