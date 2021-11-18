@@ -1,4 +1,4 @@
-import func from '../src/data.js'
+import func from '../data'
 import dataTest from './infotest.js'
 
 describe('func', () => {
