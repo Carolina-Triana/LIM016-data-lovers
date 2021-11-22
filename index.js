@@ -1,6 +1,53 @@
 let aux= document.getElementById("audio");
 aux.volume = 0.05;
 
+import func from'./data.js'
+
+fetch('./src/data/rickandmorty/rickandmorty.json')
+.then(function(info){ //primer then establece la conexion con el archivo
+    return info.json()
+})
+
+.then(function(data){ //segundo then me llama la data de .json
+  let person = data.results
+  let alive=func.filterData(person, "none", "none", "Alive")
+  let dead=func.filterData(person, "none", "none", "Dead")
+  let unknown=func.filterData(person, "none", "none", "unknown")
+  let porcentageA=func.computeData(person, alive)
+  let porcentageD=func.computeData(person, dead)
+  let porcentageU=func.computeData(person, unknown)
+
+// eslint-disable-next-line no-undef
+google.charts.load('current', {'packages':['corechart']});
+// eslint-disable-next-line no-undef
+google.charts.setOnLoadCallback(drawChart);
+
+function drawChart() {
+  
+  // eslint-disable-next-line no-undef
+  let data = google.visualization.arrayToDataTable([
+    ['Estado de vida', '# de personajes'],
+    ['Vivo',     porcentageA],
+    ['Muerto',     porcentageD],
+    ['Desconocido',     porcentageU],
+  ]);
+
+  let options = {
+    title: 'Estado personajes',
+    titleTextStyle: {bold:'true', fontSize: 18},
+    colors: ['#80CA23','#45B5C7','#a9a9a9'],
+    pieHole: 0.4,
+    pieSliceTextStyle: {
+      color: 'black',
+    },
+    legend: {position: 'labeled'},
+  };
+
+  // eslint-disable-next-line no-undef
+  let chart = new google.visualization.PieChart(document.getElementById('donut_single'));
+  chart.draw(data, options);
+}
+})
 
 const slider = document.getElementById("slider");
 let sliderSection = document.querySelectorAll(".slider-section");

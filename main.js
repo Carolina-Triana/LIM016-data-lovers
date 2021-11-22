@@ -61,10 +61,10 @@ clean.addEventListener('click',() => {
 
 document.getElementById("btn-up").addEventListener("click", scrollUp);
 function scrollUp(){
-    let scroll = document.documentElement.scrollTop || document.body.scrollTop;
+    let scroll = document.documentElement.scrollTop
     if( scroll >0 ){
         window.requestAnimationFrame(scrollUp);
-        window.scrollTo (0, scroll -(scroll / 5));
+        window.scrollTo (0, scroll -(scroll / 5)); //hasta donde sube, a que velocidad sube
     }
 }
 let btn = document.getElementById("btn-up");
