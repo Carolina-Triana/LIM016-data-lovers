@@ -50,16 +50,16 @@ function drawChart() {
 })
 
 const slider = document.getElementById("slider");
-let sliderSection = document.querySelectorAll(".slider-section");
-let sliderSectionFin = sliderSection[sliderSection.length -1];
+//let sliderSection = document.querySelectorAll(".slider-section");
+//let sliderSectionFin = sliderSection[sliderSection.length -1];
 const btnLeft = document.getElementById("slider-btn-left");
 const btnRight = document.getElementById("slider-btn-rigth");
-slider.insertAdjacentElement('afterbegin', sliderSectionFin); // coloca de priemero la ultima imagen para que se vuelva infinito
+//slider.insertAdjacentElement('afterbegin', sliderSectionFin); // coloca de priemero la ultima imagen para que se vuelva infinito
 function next(){
   let sliderOne = document.querySelectorAll(".slider-section")[0];
   slider.style.marginLeft = "-200%";
   slider.style.transition = "all 0.5s";
-  setTimeout(function(){ //setTimeOut una funcion para ejecutar despues del temporizador en este caso 500 q son medio segundo
+  setTimeout(function(){ //setTimeOut una funcion para ejecutar despues del temporizador en este caso 500 q son medio minuto
     slider.style.transition = "none";
     slider.insertAdjacentElement("beforeend", sliderOne);
     slider.style.marginLeft = "-100%";
