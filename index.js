@@ -3,7 +3,7 @@ aux.volume = 0.05;
 
 import func from'./data.js'
 
-fetch('./src/data/rickandmorty/rickandmorty.json')
+fetch("https://rickandmortyapi.com/api/character/?page=2")
 .then(function(info){ //primer then establece la conexion con el archivo
     return info.json()
 })
@@ -54,7 +54,7 @@ let sliderSection = document.querySelectorAll(".slider-section");
 let sliderSectionFin = sliderSection[sliderSection.length -1];
 const btnLeft = document.getElementById("slider-btn-left");
 const btnRight = document.getElementById("slider-btn-rigth");
-slider.insertAdjacentElement('afterbegin', sliderSectionFin); // coloca de priemero la ultima imagen para que se vuelva infinito
+slider.insertAdjacentElement('afterbegin', sliderSectionFin); // inserta dentro del elemento antes del primer hijo o al principio, la ultima imagen para que se vuelva infinito el carrusel
 function next(){
   let sliderOne = document.querySelectorAll(".slider-section")[0];
   slider.style.marginLeft = "-200%";
@@ -82,7 +82,7 @@ btnRight.addEventListener('click', function(){
 btnLeft.addEventListener('click', function(){
   prew();
 });
-setInterval(function(){ //setInterval para que se ejecute algo automaticamente
+setInterval(function(){ //setInterval para que se ejecute algo automaticamente en este caso pase la siguiente imagen
 next()
 },7000);
 

@@ -231,6 +231,7 @@ select:hover{
     -o-transform:  rotateY(180deg);
     transform: rotateY(180deg);   
     background-color:#f8ee8f;
+   
 }
 .card .front{
     position: absolute;
@@ -269,6 +270,9 @@ position: relative;
     line-height:1.8vw;
 
 } 
+.card .info img{
+    display: none;
+}
 .front h2{
     font-family: 'Special Elite', cursive;
     font-size: 1.5vw;
