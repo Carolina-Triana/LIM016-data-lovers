@@ -54,7 +54,7 @@ const slider = document.getElementById("slider");
 //let sliderSectionFin = sliderSection[sliderSection.length -1];
 const btnLeft = document.getElementById("slider-btn-left");
 const btnRight = document.getElementById("slider-btn-rigth");
-slider.insertAdjacentElement('afterbegin', sliderSectionFin); // inserta dentro del elemento antes del primer hijo o al principio, la ultima imagen para que se vuelva infinito el carrusel
+//slider.insertAdjacentElement('afterbegin', sliderSectionFin); // coloca de priemero la ultima imagen para que se vuelva infinito
 function next(){
   let sliderOne = document.querySelectorAll(".slider-section")[0];
   slider.style.marginLeft = "-200%";

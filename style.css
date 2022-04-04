@@ -280,6 +280,8 @@ position: relative;
     transform: translateZ(5vw); 
   color: #000; 
   right: 1vw;
+  height: 15vw;
+
 }
 /*----------footer-----------*/
 footer{
@@ -389,7 +391,7 @@ h2{
     text-align: center;
     font-size: 4vw;   
     filter: drop-shadow(0vw 0.2vw 0.2vw);
-    /* height: 15vw;    */
+     height: 15vw;    
 }
 .description{
     font-size: 1.5vw;
@@ -399,8 +401,8 @@ h2{
     top: -10vw;
     margin:auto;
     background-color: rgba(61, 61, 61, 0.575);
-    position: relative;
     width: 70%;
+    position: relative;
 }
 /*----------carrusel----------*/
 .container-slider{
