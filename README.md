@@ -47,7 +47,7 @@ d. Contar con una bienvenida, lista de episodios y lugares de origen
 
 ## 4. Resolviendo la problemática
 
-En este proyecto crearemos un APIcon la data procurada en el repositorio, en este caso, usando el archivo .json.  Las páginas del proyecto contarán con la estructura básica de un header, section y footer.  Para lograr nuestro objetivo cumpliremos con las siguiente historias de usuario:
+En este proyecto crearemos un APIcon la data de la API de rick and Morty de internet. Las páginas del proyecto contarán con la estructura básica de un header, section y footer.  Para lograr nuestro objetivo cumpliremos con las siguiente historias de usuario:
 
 #### a. Una página con información centralizada sobre los personajes, con la opción de filtrarla u ordenarla como deseen
 
